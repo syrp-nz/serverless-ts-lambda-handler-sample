@@ -1,0 +1,23 @@
+{
+    "name": "serverless-ts-lambda-handler-sample",
+    "version": "0.0.0",
+    "description": "Serverless sample project illustrating how to use the ts-lambda-handler package.",
+    "scripts": {
+        "test": "mocha -r ts-node/register tests/*.ts tests/**/*.ts tests/**/**/*.ts tests/**/**/**/*.ts",
+        "compile": "tsc"
+    },
+    "author": "Maxime Rainville <webmaster@syrp.co.nz> (https://syrp.co.nz)",
+    "license": "MIT",
+    "dependencies": {
+        "ts-lambda-handler": "^0.0.3"
+    },
+    "devDependencies": {
+        "@djabry/aws-sdk-typescript": "0.0.11",
+        "@types/aws-lambda": "^0.0.7",
+        "@types/chai": "^3.4.34",
+        "@types/node": "^7.0.5",
+        "@types/request": "0.0.43",
+        "aws-sdk-mock": "^1.6.1",
+        "chai": "^3.5.0"
+    }
+}
