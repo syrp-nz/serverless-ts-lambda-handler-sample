@@ -25,4 +25,4 @@ You can also invoke your function from the command line: `serverless invoke --fu
 ## Hello World
 This is the most simple function. It just spits "Hello world" in plain text in the browser on any GET request.
 
-[View the `HelloWorld` function code](/syrp-nz/serverless-ts-lambda-handler-sample/blob/master/src/handlers/HelloWorld.ts)
+[View the `HelloWorld` function code](blob/master/src/handlers/HelloWorld.ts)
