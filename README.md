@@ -4,7 +4,7 @@ This sample project illustrate how to use the [ts-lambda-handler](https://github
 # Before your start
 This sample assumes you're already familiar with how to use Serverless Framework. The Serverless Framework is the world’s leading development framework for building serverless architectures.
 
-(Learn more about the Serverless Framework)[https://serverless.com]
+[Learn more about the Serverless Framework](https://serverless.com)
 
 # Getting the sample working
 
@@ -19,3 +19,8 @@ This sample assumes you're already familiar with how to use Serverless Framework
 After deploying the project you can test that the Function by navigating to the endpoint URL shown in the console output. (e.g.: https://SOME-RANDOM-AWS-ID.execute-api.us-west-2.amazonaws.com/dev/hello-world).
 
 You can also invoke your function from the command line: `serverless invoke --function HelloWorld --path events/hello-world.json`
+
+# Available functions
+
+## [Hello World](serverless-ts-lambda-handler-sample/tree/master/src/handlers)
+This is the most simple function. It just spits "Hello world" in plain text in the browser on any GET request.
