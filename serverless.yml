@@ -26,3 +26,9 @@ functions:
       - http:
           path: hello-world
           method: get
+  SimpleHtmlPage:
+    handler: "dist/handlers/SimpleHtmlPage.handler"
+    events:
+      - http:
+          path: simple-html-page
+          method: get
