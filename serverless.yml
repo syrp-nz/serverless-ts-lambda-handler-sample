@@ -32,3 +32,9 @@ functions:
       - http:
           path: simple-html-page
           method: get
+  Login:
+    handler: "dist/handlers/Login.handler"
+    events:
+      - http:
+          path: login
+          method: post
