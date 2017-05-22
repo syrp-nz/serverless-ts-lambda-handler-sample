@@ -42,7 +42,9 @@ Invoke `HelloWorld` locally with:
 ## Simple HTML Page
 This function generates a simple HTML page with some dynamic content. It also provides a way to call the other functions.
 
-Invoke `HelloWorld` locally with:
+[View the `SimpleHtmlPage` function code](src/handlers/SimpleHtmlPage.ts)
+
+Invoke `SimpleHtmlPage` locally with:
 ```bash
 > serverless invoke local --function SimpleHtmlPage --path events/simple-html-page.json
 {
