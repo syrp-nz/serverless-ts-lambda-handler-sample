@@ -38,3 +38,9 @@ functions:
       - http:
           path: login
           method: post
+  AboutMe:
+    handler: "dist/handlers/AboutMe.handler"
+    events:
+      - http:
+          path: about-me
+          method: get
