@@ -6,6 +6,7 @@ const secret = 'my_super_evil_secret';
 /**
  * This function demonstrate a very simple authorization process. It expect to receive a JSON object with a `username`
  * and `password` attribute. If the `username` and the `password` match, then the user is issued a Json Web Token (JWT)
+ * to be stored in a cookie.
  */
 class LoginHandler extends LambdaHandler.Handlers.AbstractHandler {
     public process(request: LambdaHandler.Request, response: LambdaHandler.Response): Promise<void> {
@@ -18,7 +19,7 @@ class LoginHandler extends LambdaHandler.Handlers.AbstractHandler {
             // For simplicity, we'll store the JWT althought.
 
             const cookieOptions: LambdaHandler.CookieOptions = {
-                maxAge: 5 * 60,     // We'll set the cookie expiration date to match the JWT's one.
+                maxAge: 4 * 60,     // We'll set the cookie expiration date to be 4 min (2 min more than the JWT).
                 httpOnly: false,
             };
 
@@ -56,8 +57,8 @@ class LoginHandler extends LambdaHandler.Handlers.AbstractHandler {
             username: username
         };
 
-        // Our token will be valid for 5 minutes
-        const options = {expiresIn: 5 * 60};
+        // Our token will be valid for 2 minutes
+        const options = {expiresIn: 2 * 60};
 
         // Build the actual token
         return JWT.sign(payload, secret, options)
